@@ -19,7 +19,7 @@ const LoginView = (props) => {
                 <TextField variant='filled' style={{width: '80%'}} label='Password'></TextField>
             </div>
             <div className={styles.buttonContainer}>
-                <Button onClick={handleClick} variant='contained' style={{width: '100%', height: '100%', borderRadius: '0'}}>
+                <Button onClick={handleClick} variant='contained' className={styles.login}>
                     Log In
                 </Button>
             </div>

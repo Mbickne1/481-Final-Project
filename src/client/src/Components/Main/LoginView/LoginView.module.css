@@ -1,19 +1,20 @@
 .container {
     display: flex;
     width: 20%;
-    height: 55%;
+    height: 30%;
     margin: auto;
     border: 3px solid black;
+    
     flex-direction: column;
     justify-content: center;
-    align-content: center;
     align-self: center;
 }
 
 .fieldContainer {
     display: flex;
     width: 100%;
-    height: 30%;
+    height: 50%;
+    margin-top: auto;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -21,6 +22,12 @@
 
 .buttonContainer {
     width: 100%;
-    height: 10%;
+    height: 15%;
     margin-top: auto;
+}
+
+.login {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
 }
