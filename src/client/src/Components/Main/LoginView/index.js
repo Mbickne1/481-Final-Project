@@ -4,12 +4,12 @@ import styles from './LoginView.module.css';
 import useLoginService from './useLoginService';
 
 const LoginView = (props) => {
-    const { setShowLogin } = props;
+    const { setView} = props;
     const [isValidUser, validate, validateGuest] = useLoginService();
 
     useEffect(() => {
         if(isValidUser) {
-            setShowLogin(false);
+            setView(1);
         }
     }, [isValidUser])
 
@@ -21,13 +21,7 @@ const LoginView = (props) => {
         validate(username, password);
     }
 
-
-
-    const guestLogin = (event) => {
-        const target = event.target;
-
-        validateGuest();
-    }
+    const guestLogin = () => { validateGuest(); }
 
     return (
         <div className={styles.container}>
