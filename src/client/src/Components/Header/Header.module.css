@@ -1,0 +1,9 @@
+.container {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 3px solid black;
+    background-color: #4DBDBD;
+    color: white;
+}
