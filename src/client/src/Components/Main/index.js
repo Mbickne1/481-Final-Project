@@ -8,7 +8,7 @@ const Main = () => {
     const [view, setView] = useState(0);
 
     return (
-        <div style={{width: '100vw', height: '100vh', display: 'flex',flexDirection: 'column', backgroundColor: '#D6D6D6'}}>
+        <div style={{width: '100vw', height: '100vh', display: 'flex',flexDirection: 'column', backgroundColor: '#ECF7DC'}}>
             <Header view={view} setView={setView} />
             {view == 0
                 ? <LoginView setView={setView}/>
