@@ -24,18 +24,21 @@ const LoginView = (props) => {
     const guestLogin = () => { validateGuest(); }
 
     return (
-        <div className={styles.container}>
-            <div className={styles.fieldContainer}>
-                <TextField id='username' variant='filled' style={{width: '80%'}} label='Username'></TextField>
-                <TextField id='password' variant='filled' style={{width: '80%'}} label='Password'></TextField>
+        <div style={{height: '90%'}}>
+            <div className={styles.container}>
+                <div className={styles.fieldContainer}>
+                    <TextField id='username' variant='filled' style={{width: '80%'}} label='Username'></TextField>
+                    <TextField id='password' variant='filled' style={{width: '80%'}} label='Password'></TextField>
+                </div>
+                <div className={styles.buttonContainer}>
+                    <Button onClick={attemptLogin} variant='contained' className={styles.login}>
+                        Log In
+                    </Button>
+                </div>
+                <Button variant='text' onClick={guestLogin}>Continue as Guest</Button>
             </div>
-            <div className={styles.buttonContainer}>
-                <Button onClick={attemptLogin} variant='contained' className={styles.login}>
-                    Log In
-                </Button>
-            </div>
-            <Button variant='text' onClick={guestLogin}>Continue as Guest</Button>
         </div>
+           
     );
 }
 

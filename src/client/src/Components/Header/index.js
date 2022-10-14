@@ -1,31 +1,35 @@
-import { Button, IconButton } from '@mui/material';
-import LogoutIcon from '@mui/icons-material/Logout';
-import React from 'react';
-import styles from './Header.module.css';
+import React, { useEffect } from 'react';
+
+import LoginHeader from './LoginHeader';
+import ShopHeader from './ShopHeader';
 
 const Header = (props) => {
     const { view, setView } = props;
 
-    const logout = () => {
-        console.log("Logging Out");
-        setView(0);
-    }
+    useEffect(() => {
+
+    })
+
+    
 
     return (
-        <header className={styles.container}>
+        <>
             {view == 0 && 
-                <h1>Welcome! Login To Make An Order! </h1>
+                <LoginHeader />    
             }
             {view == 1 &&
-                <div style={{color: 'white', justifySelf: 'flex-end', alignItems: 'center'}}>
-                    <IconButton onClick={logout} style={{color: 'white'}}>
-                        <LogoutIcon fontSize='large'/>
-                    </IconButton>
-                </div>
+                <ShopHeader setView={setView}/>
             }
-        </header>
+            <div style={{width: '50%', minHeight: '25px', borderRadius: '10px', backgroundColor: '#f5426c', margin: 'auto'}}></div>
+        </>
     );
 
 }
 
 export default Header;
+
+{/* <div style={{color: 'white', justifySelf: 'flex-end', alignItems: 'center'}}>
+                    <IconButton onClick={logout} style={{color: 'white'}}>
+                        <LogoutIcon fontSize='large'/>
+                    </IconButton>
+                </div> */}

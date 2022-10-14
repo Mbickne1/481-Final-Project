@@ -1,8 +1,10 @@
 .container {
     display: flex;
+    position: absolute;
+    left: 40%;
+    top: 35%;
     width: 20%;
     height: 30%;
-    margin: auto;
     border: 3px solid black;
     box-shadow: 15px 15px black;
     background-color: white;
