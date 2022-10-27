@@ -27,9 +27,3 @@ const Header = (props) => {
 }
 
 export default Header;
-
-{/* <div style={{color: 'white', justifySelf: 'flex-end', alignItems: 'center'}}>
-                    <IconButton onClick={logout} style={{color: 'white'}}>
-                        <LogoutIcon fontSize='large'/>
-                    </IconButton>
-                </div> */}

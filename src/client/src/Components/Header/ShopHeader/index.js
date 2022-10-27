@@ -16,10 +16,10 @@ const ShopHeader = (props) => {
         <div style={{display: 'flex', width: '100%', minHeight: '100px', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
             <TextField 
                 variant='filled'
-                disableUnderline
+                disableunderline="true"
                 hiddenLabel
                 size="small"
-                style={{marginLeft: 'auto', height: '25px', borderRadius: '5px'}}
+                style={{marginLeft: 'auto'}}
                 InputProps={{
                     style: {
                         padding: 0,
