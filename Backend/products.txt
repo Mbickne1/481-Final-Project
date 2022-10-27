@@ -1,0 +1,91 @@
+name: Mutenka Koji Miso, price: 3.90, brand: Hanamaruki
+name: Yogurt Ice Bar, price: 1.60, brand: Chain Kou Mei
+name: Fry Chili in Oil, price: 1.95, brand: LGM
+name: U-DON, price: 3.50, brand: CJ
+name: Cold Noodle (donghimi), price: 3.90, brand: CJ
+name: Soybean Paste Stew Stock, price: 3.60, brand: 
+name: Spicy Soft Tofu Stew Stock, price: 3.90, brand: 
+name: Cabbage Kimchi, price: 6.40, brand: DW
+name: Banana Flavored Drink, price: 4.50, brand: Bing
+name: Strawberry Flavored Drink, price: 4.50, brand: Bing
+name: Coffee Flavor Drink-Mild Latte, price: 1.30, brand: Maeil
+name: Red Pepper Powder, price: 4.00, brand: TG
+name: 7Mixed Grain, price: 10.50, brand: CRD
+name: Gaba Rice, price: 25.70, brand: Kyong Gi Me
+name: Mixed beans, price: 6.20, brand: CRD
+name: Nutri-Whole Grain Brown Rice 15LB, price: 23.00, brand: 
+name: Nutri-Whole Grain Brown Rice 4.4LB, price: 7.50, brand: 
+name: Premium Organic Soy Bean, price: 7.00, brand: 0 Grain
+name: Oat Gaba Mixed Grain 3.5LB, price: 12.20, brand: 0 Grain
+name: Gaba 17 Mixed Grain 3.5 LB, price: 12.50, brand:  0 Grain
+name: Green Pea, price: 1.75, brand: CRD
+name: Black Sweet Rice, price: 8.00, brand: CRD
+name: Dried Radish Sliced, price: 4.00, brand: DMS
+name: Black Fungus, price: 4.75, brand: CRD
+name: Dried Shitake Mushroom, price: 5.20, brand: DMS
+name: Beef Bonestock Hotpot, price: 3.40, brand: CJ
+name: Gwang Chun-Roasted Laver, price: 3.40, brand: CRD
+name: Dried Kelp, price: 9.50, brand: CRD
+name: Roasted(Sesame Oil) Laver, price: 3.00, brand: DW
+name: Seasoned laver, price: 2.50, brand: DW
+name: Dried Seaweed, price: 3.25, brand: CRD
+name: Sesame Oil, price:  9.30, brand: CJ
+name: Cooked Rice bowl w/ seaweed soup, price:  2.15, brand: CJ
+name: Oligodang Syrup, price:  3.60, brand: CJ
+name: Plum Sweet, price:  9.50, brand: CJ
+name: Plum Syrup, price:  7.61, brand: CJ
+name: Cooking Sauce(Ginger Flavor), price:  3.25, brand: CJ
+name: Spicy & Sweet Rice Cake, price:  1.60, brand: DW
+name: Cheese Rice Cake, price:  2.55, brand: DW
+name: Hot Spicy Rice Cake, price:  2.55, brand: DW
+name: Luncheon Meat, price:  2.50, brand: DW
+name: Vegetable Tuna (Multi), price:  5.75, brand: DW
+name: Tuna-Red pepper(bundle), price:  7.00, brand: DW
+name: Tuna(light)standard-can, price:  7.00, brand: DW
+name: Cooked Glutinous Rice, price:  3.00, brand: DW
+name: Salted Anchovy Sauce, price:  4.25, brand: HSJ
+name: Sesame Oil, price:  3.50, brand: HS
+name: Mirim(cooking wine), price:  3.25, brand: Lotte
+name: Black Bean Soy Milk, price:  8.50, brand: Erom
+name: Milkis-Regular, price:  2.70, brand: Lotte 
+name: Frozen Salted Mackerel Fillet, price: 6.25, brand: CRD
+name: Frozen Mackerel Pike, price: 6.00, brand: CRD
+name: Half Shell Mussel, price: 7.80, brand: NZ
+name: Frozen Pollack Roe, price: 6.00, brand: CRD
+name: Frozen Sea Squirt, price: 1.60, brand: CRD
+name: Small Octopus, price: 2.75, brand: CRD
+name: Seasoned & Fried Soybean Curd, price: 3.80, brand: CRD
+name: Dumpling Wrapper, price: 1.77, brand: CRD
+name: Sweet red bean bun, price: 2.25, brand: CRD
+name: Kimchi Dumpling with pork, price: 6.50, brand: CRD
+name: Cold noodles with soup, price: 3.70, brand: CRD
+name: Frozen Chewing Noodle, price: 2.50, brand: CRD
+name: Sweet  Corn, price: 2.63, brand: CRD
+name: Bibigo Fried Dumpling, price 5.80, brand: CJ
+name: Roasted Dumpling, price: 11.17, brand: CJ
+name: Bibigo Beef Dumpling, price: 5.80, brand: CJ
+name: Cold Noodle, price: 4.25, brand: CG
+name: Frozen Noodle(Sujebi) with Perilla Seeds, price: 3.75, brand: CG
+name: Bibigo Wang Gyoza Beef & Vegetable, price: 6.50, brand: CJ 
+name: Chilsung Cider, price:  3.03, brand: Lotte
+name: Rice Drink, price:  2.60, brand: Woongjin
+name: Buckwheat Noodle, price:  3.10, brand: Onoodle
+name: Udon With Soup (Seafood), price: 2.30, brand: CRD
+name: Vermicelli(Pre-Cut), price:  0.50, brand: CRD
+name: Potato Starch, price:  3.00, brand: CRD
+name: Beef Flavored Seasoning, price:  6.00, brand: CJ
+name: Dasida Anchovy Soup-Stock, price:  3.30, brand: CJ
+name: Korean Pancake Mix Powder, price:  1.60, brand: CS
+name: Natural Pancake Mixed Powder, price:  3.75, brand: CS
+name: Frying Mix Powder, price:  1.60, brand: CJ
+name: Instant  Seaweed Soup, price:  3.25, brand: OTG
+name: Natural Sea Salt(Coarse), price:  2.70, brand: CRD
+name: Gunbbang, price:  2.40, brand: CS
+name: Ginger Candy, price:  3.65, brand: CS
+name: Korean Pop Corn, price:  3.20, brand: DY
+name: Custard Cake, price:  4.00, brand: Lotte
+name: Pepero Almond, price:  3.50, brand: Lotte
+name: Red Gingseng tea, price:  6.20, brand: CRD
+name: Dried  Squid, price:  8.55, brand: CRD
+name: Seasoned & Shredded Squid, price:  7.50, brand: CRD
+name: Cut Monk Fish, price: 9.40, brand: CRD 
