@@ -7,38 +7,41 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor()
 
-def deleteProduct (item_name):
+def deleteProduct (mycursor,item_name):
     prepStatement = ("DELETE FROM productTable WHERE name = "+str(item_name))
     print(prepStatement)
     mycursor.execute(prepStatement)
     mydb.commit()
 
 
-def addItem(item_name,price,brand):
+def addItem(mycursor,item_name, price, brand):
     prepareString = "INSERT INTO productTable(name, price, brand) VALUES(%s,%s,%s)"
     val = (str(item_name), price, str(brand))
     mycursor.execute(prepareString, val)
     mydb.commit()
 
-def addUser(userName,passWord):
+
+def addUser(mycursor,userName, passWord):
     prepareString = "INSERT INTO userPass(userName, passWord) VALUES(%s,%s)"
     val = (str(userName),str(passWord))
     mycursor.execute(prepareString, val)
     mydb.commit()
 
 
-def deleteUser(userName):
+def deleteUser(mycursor,userName):
     prepStatement = ("DELETE FROM userPass WHERE userName = "+str(userName))
     mycursor.execute(prepStatement)
     mydb.commit()
 
-def printItemList():
+
+def printItemList(mycursor):
     mycursor.execute("SELECT * FROM shopping_cart.productTable;")
     result = mycursor.fetchall()
     return result
 
 
 if __name__ == "__main__":
+    print("Starting")
     mycursor.execute("SELECT * FROM shopping_cart.productTable;")
     result = mycursor.fetchall()
     print(result)
