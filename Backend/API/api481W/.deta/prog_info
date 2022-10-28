@@ -1,0 +1,1 @@
+{"id":"b81dae70-8274-4b95-940d-81f785c04c0a","space":17032,"runtime":"python3.9","name":"api481W","path":"5rn68t","project":"b06dkyg3","account":"144798365827","region":"us-east-1","deps":["flask","fastapi","mysql-connector-python"],"envs":null,"public":true,"log_level":"debug","cron":""}

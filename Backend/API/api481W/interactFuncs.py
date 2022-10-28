@@ -1,4 +1,3 @@
-import mysql.connector
 
 # mydb = mysql.connector.connect(
 #     user='admin', password='Evett123',
@@ -75,13 +74,13 @@ def getCart(mydb, userName):
     result = mycursor.fetchall()
     return result
 
-if __name__ == "__main__":
-    mydb = mysql.connector.connect(
-        user='admin', password='Evett123',
-        host='final481.c9debhe4folh.us-east-2.rds.amazonaws.com',
-        database='shopping_cart')
+# if __name__ == "__main__":
+#     mydb = mysql.connector.connect(
+#         user='admin', password='Evett123',
+#         host='final481.c9debhe4folh.us-east-2.rds.amazonaws.com',
+#         database='shopping_cart')
 
-    mycursor = mydb.cursor()
-    mycursor.execute("DROP TABLE `shopping_cart`.`cart`")
-    result = mycursor.fetchall()
-    print(result)
+#     mycursor = mydb.cursor()
+#     mycursor.execute("DROP TABLE `shopping_cart`.`cart`")
+#     result = mycursor.fetchall()
+#     print(result)

@@ -1,8 +1,4 @@
-import imp
-from typing import ItemsView
-import uvicorn
 from interactFuncs import *
-from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
 import mysql.connector
 
@@ -17,28 +13,9 @@ mycursor = "temp"
 
 app = FastAPI()
 
-currentTrack = 0
-
-origins = [
-    "http://192.168.50.189:8080",
-    "http://127.0.0.1:8080",
-    "https://ahlan-salati.surge.sh/",
-    "https://ahlan-salati.surge.sh"
-]
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
-
 @app.get("/")
 async def read_item():
     return ("Sucsuess")
-
 
 @app.get("/getItems")
 async def read_item():
@@ -93,5 +70,3 @@ async def read_item(user_name: str):
     response = clearCart(mydb,user_name)
     return (response)
 
-if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
