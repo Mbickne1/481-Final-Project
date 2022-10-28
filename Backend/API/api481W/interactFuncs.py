@@ -1,12 +1,16 @@
+import mysql.connector
 
-# mydb = mysql.connector.connect(
-#     user='admin', password='Evett123',
-#     host='final481.c9debhe4folh.us-east-2.rds.amazonaws.com',
-#     database='shopping_cart')
 
-# mycursor = mydb.cursor()
 
-def deleteProduct (mydb,item_name):
+def dbObject():
+    mydb = mysql.connector.connect(
+        user='admin', password='Evett123',
+        host='final481.c9debhe4folh.us-east-2.rds.amazonaws.com',
+        database='shopping_cart')
+    return mydb
+
+def deleteProduct (item_name):
+    mydb = dbObject()
     mycursor = mydb.cursor()
     prepStatement = ('DELETE FROM productTable WHERE name = "'+str(item_name)+'"')
     print(prepStatement)
@@ -14,7 +18,9 @@ def deleteProduct (mydb,item_name):
     mydb.commit()
 
 
-def addItem(mydb,item_name, price, brand):
+def addItem(item_name, price, brand):
+    mydb = dbObject()
+
     mycursor = mydb.cursor()
     prepareString = "INSERT INTO productTable(name, price, brand) VALUES(%s,%s,%s)"
     val = (str(item_name), price, str(brand))
@@ -22,7 +28,9 @@ def addItem(mydb,item_name, price, brand):
     mydb.commit()
 
 
-def addUser(mydb,userName, passWord):
+def addUser(userName, passWord):
+    mydb = dbObject()
+
     mycursor = mydb.cursor()
     prepareString = "INSERT INTO userPass(userName, passWord) VALUES(%s,%s)"
     val = (str(userName),str(passWord))
@@ -30,26 +38,34 @@ def addUser(mydb,userName, passWord):
     mydb.commit()
 
 
-def deleteUser(mydb,userName):
+def deleteUser(userName):
+    mydb = dbObject()
+
     mycursor = mydb.cursor()
     prepStatement = ('DELETE FROM userPass WHERE userName = "'+str(userName)+'"')
     mycursor.execute(prepStatement)
     mydb.commit()
 
-def printItemList(mydb):
+def printItemList():
+    mydb = dbObject()
+
     mycursor = mydb.cursor()
     mycursor.execute("SELECT * FROM shopping_cart.productTable;")
     result = mycursor.fetchall()
     return result
 
-def addToCart(mydb, userName,itemName,price,brand):
+def addToCart(userName,itemName,price,brand):
+    mydb = dbObject()
+
     mycursor = mydb.cursor()
     prepareString = "INSERT INTO cart(userName,itemName,price,brand) VALUES(%s,%s,%s,%s)"
     val = (str(userName),str(itemName),price, str(brand))
     mycursor.execute(prepareString, val)
     mydb.commit()
 
-def deleteFromCart(mydb, userName, itemName):
+def deleteFromCart(userName, itemName):
+    mydb = dbObject()
+
     mycursor = mydb.cursor()
     prepareString = 'DELETE FROM cart WHERE userName = "'+userName+'" AND itemName = "'+itemName+'"'
     print(prepareString)
@@ -59,7 +75,9 @@ def deleteFromCart(mydb, userName, itemName):
     mydb.commit()
     return(returnText)
 
-def clearCart(mydb, userName):
+def clearCart(userName):
+    mydb = dbObject()
+
     mycursor = mydb.cursor()
     prepareString = 'DELETE FROM cart WHERE userName = "' +userName+'"'
     print(prepareString)
@@ -68,7 +86,9 @@ def clearCart(mydb, userName):
     mydb.commit()
     return (returnText)
 
-def getCart(mydb, userName):
+def getCart(userName):
+    mydb = dbObject()
+
     mycursor = mydb.cursor()
     mycursor.execute('SELECT * FROM shopping_cart.cart WHERE userName = "'+userName+'"')
     result = mycursor.fetchall()
