@@ -1,10 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { TextField, Button } from '@mui/material';
 import styles from './LoginView.module.css';
 import useLoginService from './useLoginService';
+import LoginFields from './LoginFields';
+import SignUpFields from './SignUpFields';
+
+const LOGIN = "Login";
+const SIGNUP = "Sign Up";
 
 const LoginView = (props) => {
-    const { setView} = props;
+    const { setView } = props;
+    const [tab, setTab] = useState(0);
     const [isValidUser, validate, validateGuest] = useLoginService();
 
     useEffect(() => {
@@ -21,21 +27,30 @@ const LoginView = (props) => {
         validate(username, password);
     }
 
+    const toggleTab = () => {
+        setTab(tab == 0 ? 1 : 0);
+    }
+
     const guestLogin = () => { validateGuest(); }
 
     return (
         <div style={{height: '90%'}}>
             <div className={styles.container}>
-                <div className={styles.fieldContainer}>
-                    <TextField id='username' variant='filled' style={{width: '80%'}} label='Username'></TextField>
-                    <TextField id='password' variant='filled' style={{width: '80%'}} label='Password'></TextField>
-                </div>
+                {tab == 0 
+                    ? <LoginFields />
+                    : <SignUpFields />
+                }
                 <div className={styles.buttonContainer}>
                     <Button onClick={attemptLogin} variant='contained' className={styles.login}>
-                        Log In
+                        {tab == 0 ? LOGIN : SIGNUP}
+                    </Button>
+                    <Button onClick={toggleTab}>
+                        {tab == 0 ? SIGNUP : LOGIN}
                     </Button>
                 </div>
-                <Button variant='text' onClick={guestLogin}>Continue as Guest</Button>
+                {tab == 0 &&
+                    <Button variant='text' onClick={guestLogin}>Continue as Guest</Button>
+                }
             </div>
         </div>
            
