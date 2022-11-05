@@ -5,10 +5,9 @@
     top: 35%;
     width: 20%;
     height: 40%;
-    border: 3px solid black;
-    box-shadow: 15px 15px black;
-    background-color: white;
-    border-radius: 10px;
+    border: 3px solid #615b5c;
+    background-color: whitesmoke;
+    border-radius: 5px;
     flex-direction: column;
     justify-content: center;
     align-self: center;

@@ -6,7 +6,7 @@ const LoginFields = () => {
 
     return(
         <div className={styles.fieldContainer}>
-            <TextField id='username' variant='filled' style={{width: '80%'}} label='Username'></TextField>
+            <TextField id='username' variant='filled' style={{width: '80%', color: "white"}} label='Username'></TextField>
             <TextField id='password' variant='filled' style={{width: '80%'}} label='Password'></TextField>
         </div>
     );
