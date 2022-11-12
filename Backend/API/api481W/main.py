@@ -9,6 +9,8 @@ origins = [
     "http://localhost:3000/",
     "http://localhost/",
     "68.36.27.227",
+    "http://127.0.0.1",
+    "http://127.0.0.1:3000",
     "http://localhost",
     "http://localhost:8080",
 ]
