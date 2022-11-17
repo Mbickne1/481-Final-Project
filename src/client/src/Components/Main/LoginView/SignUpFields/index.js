@@ -2,12 +2,18 @@ import React from 'react';
 import { TextField } from '@mui/material';
 import styles from '../LoginView.module.css';
 
-const SignUpFields = () => {
+const SignUpFields = (props) => {
+    const {error, errorMessage} = props;
+
+
     return (
         <div className={styles.fieldContainer}>
-            <TextField id='username' variant='filled' style={{width: '80%'}} label='Username'></TextField>
-            <TextField id='password' variant='filled' style={{width: '80%'}} label='Password'></TextField>
-            <TextField id='password' variant='filled' style={{width: '80%'}} label='Confirm Password'></TextField>
+            <TextField id='signUpUsername' variant='filled' style={{width: '80%'}} label='Username'></TextField>
+            <TextField id='signUpPassword' variant='filled' style={{width: '80%'}} label='Password'></TextField>
+            <TextField id='confrimPassword' variant='filled' style={{width: '80%'}} label='Confirm Password'></TextField>
+            {error &&
+                <p style={{color: 'red', textAlign: 'center'}}>{errorMessage}</p>
+            }
         </div>
     );
 }
