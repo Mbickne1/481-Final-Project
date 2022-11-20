@@ -2,7 +2,8 @@ import {useState, useEffect} from 'react';
 
 export const useGetItem = () => {
     const [data, setData] = useState([]);
-
+    const [shouldRefetch, refetch] = useState(false);
+   
     useEffect(() => {
         fetch('http://localhost:8080/getItems', {
             method: 'GET',
@@ -13,11 +14,12 @@ export const useGetItem = () => {
         })
             .then(res => res.json())
             .then(response => {
-                console.log(response);              
+                setData(response);            
             })
             .catch(error => console.log(error));
-    }, []);
+    }, [refetch]);
 
+    return [data, refetch];
 }
 
 export const useUserExists = () => {

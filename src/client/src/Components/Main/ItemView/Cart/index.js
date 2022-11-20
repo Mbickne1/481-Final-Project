@@ -28,7 +28,7 @@ const Cart = (props) => {
                 </Table>
             </TableContainer>
             <div style={{textAlign: 'center'}}>
-                <h1>Total: ${total.toFixed(2)}</h1>
+                <h1>Estimated Total: ${total.toFixed(2)}</h1>
             </div>
             <Button fullWidth variant="contained" style={{position: 'absolute', bottom: '0'}}>Place Order</Button>
         </Paper>

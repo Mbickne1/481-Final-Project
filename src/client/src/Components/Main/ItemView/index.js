@@ -1,41 +1,46 @@
 import { Paper, Stack } from '@mui/material';
 import React, { useEffect, useState } from 'react';
+import { useGetItem } from '../../../Services/Hooks/APIRequests';
 import Cart from './Cart';
 import Item from './Item';
-
-const ITEMS = [
-    {name: "Item One", price: 10.00, qty: 0},
-    {name: "Item Two", price: 5.99, qty: 0},
-    {name: "Item Three", price: 20.00, qty: 0},
-    {name: "Item Four", price: 6.99, qty: 0},
-    {name: "Item Five", price: 15.99, qty: 0},
-    {name: "Item Six", price: 13.00, qty: 0},
-]
 
 const ItemView = () => {
     const [cart, setCart] = useState([]);
     const [itemList, setItemList] = useState([]);
     const [cartTotal, setCartTotal] = useState(0.00);
+    const [data, refetch] = useGetItem();
+
+    //TODO: FINISH MAKING QUANTITY CALCULATION HAPPEN CORRECTLY
+    //TODO: EVERYTIME AN ITEM IS ADDED TO CART, CALLS API TO UPDATE CART IN DB
+        //Pass the item being added with its new quantity.
+    //TODO: FETCH CART WHEN USER LOGINS AND DISPLAY PROPERLY
+    //TODO: PROPERLY CREATE AND MANAGE/FETCH CART FROM THE SERVER
+    //TODO: ADD CHECKOUT FUNCTIONALITY
+    //TODO: ADD INVALID LOGIN ERROR
 
     useEffect(() => {
-        setItemList(ITEMS);
-    }, [ITEMS]);
+        if(data.length > 0) {
+            const items = [...data];
+            items.forEach((item) => {
+                item.qty = 0;
+                console.log(item);
+            })
+            setItemList(items);
+        } 
+    }, [data]);
 
     //TODO: Finish Proper Total Cart Cost Calculation
     const addToCart = (idx, quantity) => (event) => {
         if (quantity == 0) return;
         const newCart = [...cart];
+        const tempList = [...itemList];
         
-        const index = newCart.findIndex(item => item.name == ITEMS[idx].name);
-        if(index == -1) {
-            ITEMS[idx].qty = quantity;
-            newCart.push(ITEMS[idx]);
-        } else {
-            ITEMS[idx].qty = quantity;
-            newCart[index].qty = quantity;
-        }
-
+        const index = newCart.findIndex(item => item.name == tempList[idx].name);
+        tempList[idx].qty = quantity;
+        index == -1 ? newCart.push(tempList[idx]) : newCart[index].qty = tempList[idx].qty;
+        
         setCart(newCart);
+        setItemList(tempList);
     }
 
     useEffect(() => {
@@ -52,7 +57,7 @@ const ItemView = () => {
             <Stack spacing={2} style={{width: '60%'}}>
             {
                 itemList.map((item, idx) => 
-                    <Item key={item.name} item={item} idx={idx} addItem={addToCart}/>
+                    <Item key={item.name + Math.random()} item={item} idx={idx} addItem={addToCart}/>
                 )               
             }
             </Stack>
