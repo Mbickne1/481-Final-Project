@@ -3,7 +3,7 @@ import { Button, Paper, Table, TableBody, TableCell, TableContainer, TableHead, 
 
 
 const Cart = (props) => {
-    const { cart, total, setCart } = props;
+    const { cart, total, setView, setCart } = props;
 
     return (
         <Paper elevation={10} style={{width: '30%', height: '75%', marginRight: '50px', position: 'fixed', right: '20px'}}>
@@ -30,7 +30,7 @@ const Cart = (props) => {
             <div style={{textAlign: 'center'}}>
                 <h1>Estimated Total: ${total.toFixed(2)}</h1>
             </div>
-            <Button fullWidth variant="contained" style={{position: 'absolute', bottom: '0'}}>Place Order</Button>
+            <Button fullWidth variant="contained" onClick={() => setView(2)} style={{position: 'absolute', bottom: '0'}}>Place Order</Button>
         </Paper>
     );
 }

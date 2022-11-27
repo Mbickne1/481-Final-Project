@@ -7,13 +7,12 @@ import './index.css';
 const CartView = () => {
 
     return (
-        <div className="App">
+      <div className="App">
         <Header></Header>
         <div className ="row">
           <Main></Main>
           <Basket></Basket>
         </div>
-       
       </div>
     );
 }

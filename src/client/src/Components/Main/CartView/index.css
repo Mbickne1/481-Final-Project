@@ -22,7 +22,9 @@ a {
   display: flex;
   justify-content:  space-between;
 }
-
+.App {
+  height: 90%;
+}
 .col-1 {
   flex:1;
 }

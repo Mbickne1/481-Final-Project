@@ -4,19 +4,12 @@ import { useGetItem } from '../../../Services/Hooks/APIRequests';
 import Cart from './Cart';
 import Item from './Item';
 
-const ItemView = () => {
+const ItemView = (props) => {
+    const {setView} = props;
     const [cart, setCart] = useState([]);
     const [itemList, setItemList] = useState([]);
     const [cartTotal, setCartTotal] = useState(0.00);
     const [data, refetch] = useGetItem();
-
-    //TODO: FINISH MAKING QUANTITY CALCULATION HAPPEN CORRECTLY
-    //TODO: EVERYTIME AN ITEM IS ADDED TO CART, CALLS API TO UPDATE CART IN DB
-        //Pass the item being added with its new quantity.
-    //TODO: FETCH CART WHEN USER LOGINS AND DISPLAY PROPERLY
-    //TODO: PROPERLY CREATE AND MANAGE/FETCH CART FROM THE SERVER
-    //TODO: ADD CHECKOUT FUNCTIONALITY
-    //TODO: ADD INVALID LOGIN ERROR
 
     useEffect(() => {
         if(data.length > 0) {
@@ -52,6 +45,8 @@ const ItemView = () => {
         setCartTotal(total);
     }, [cart]);
 
+    
+
     return (
         <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', paddingTop: '30px'}}>
             <Stack spacing={2} style={{width: '60%'}}>
@@ -61,7 +56,7 @@ const ItemView = () => {
                 )               
             }
             </Stack>
-            <Cart cart={cart} setCart={setCart} total={cartTotal}/>
+            <Cart cart={cart} setCart={setCart} total={cartTotal} setView={setView}/>
         </div>
         
     );

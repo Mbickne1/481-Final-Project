@@ -5,7 +5,7 @@ import CartView from '../Main/CartView';
 
 function App() {
   return (
-    <CartView />
+    <Main  />
   );
 }
 

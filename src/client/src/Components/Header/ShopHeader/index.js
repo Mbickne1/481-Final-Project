@@ -32,7 +32,7 @@ const ShopHeader = (props) => {
                         </InputAdornment>
                 }}
             ></TextField>
-            <IconButton onClick={logout} style={{marginLeft: 'auto', color: 'black', alignSelf: 'center'}}>
+            <IconButton onClick={logout} style={{marginLeft: 'auto', width: "5%", color: 'black', alignSelf: 'center'}}>
                 <LogoutIcon fontSize='large'/>
             </IconButton>
         </div>
