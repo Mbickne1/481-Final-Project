@@ -4,8 +4,8 @@ import Main from './componenets/Main';
 import Header from './Header';
 import './index.css';
 
-const CartView = () => {
-
+const CartView = (props) => {
+    const {cart, setCart, data} = props;
     return (
       <div className="App">
         <Header></Header>

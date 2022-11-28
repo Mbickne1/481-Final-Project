@@ -5,11 +5,10 @@ import Cart from './Cart';
 import Item from './Item';
 
 const ItemView = (props) => {
-    const {setView} = props;
-    const [cart, setCart] = useState([]);
+    const {setView, cart, setCart, data} = props;
     const [itemList, setItemList] = useState([]);
     const [cartTotal, setCartTotal] = useState(0.00);
-    const [data, refetch] = useGetItem();
+    
 
     useEffect(() => {
         if(data.length > 0) {
