@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 
+
 const Cart = (props) => {
     const { cart, total, setView, setCart } = props;
 
@@ -11,7 +12,7 @@ const Cart = (props) => {
                     <TableHead>
                         <TableCell align='center'>QTY</TableCell>
                         <TableCell align='center'>ITEM</TableCell>
-                        <TableCell align='center'>PRICES</TableCell>
+                        <TableCell align='center'>PRICE</TableCell>
                     </TableHead>
                     <TableBody>
                         {
@@ -29,7 +30,7 @@ const Cart = (props) => {
             <div style={{textAlign: 'center'}}>
                 <h1>Estimated Total: ${total.toFixed(2)}</h1>
             </div>
-            <Button fullWidth variant="contained" onClick={() => setView(3)} style={{position: 'absolute', bottom: '0'}}>Confirm Order</Button>
+            <Button fullWidth variant="contained" onClick={() => setView(2)} style={{position: 'absolute', bottom: '0'}}>Place Order</Button>
         </Paper>
     );
 }

@@ -29,7 +29,6 @@ const Cart = (props) => {
             <div style={{textAlign: 'center'}}>
                 <h1>Estimated Total: ${total.toFixed(2)}</h1>
             </div>
-            <Button fullWidth variant="contained" onClick={() => setView(3)} style={{position: 'absolute', bottom: '0'}}>Confirm Order</Button>
         </Paper>
     );
 }

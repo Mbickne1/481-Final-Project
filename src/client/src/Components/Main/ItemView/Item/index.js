@@ -1,45 +1,55 @@
-import { Card, IconButton, TextField, Button } from '@mui/material';
-import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
-import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import './index.css';
 
-const Item = (props) => {
-    const {item, addItem, idx} = props;
-    const [quantity, setQuantity] = useState(0);
-
-    const increaseQuantity = () => {
-        setQuantity(quantity + 1);
-    }
-    
-    // useEffect(() => {
-    //     setQuantity(0);
-    // }, [item]);
-
-    const decreaseQuantity = () => {
-        setQuantity(quantity - 1);
-    }
-
-    return (
-            <Card elevation={10} style={{width: '100%', height: '30%', display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginLeft: '50px'}}>
-                {/* <div style={{ height: '80%', width: '15%', border: '1px solid black', alignSelf: 'center', marginLeft: '10px'}}></div> */}
-                <div style={{width: '25%', display: 'flex', flexDirection: 'column', marginLeft: '20px', marginRight: 'auto'}}>
-                    <h1>{item.name}</h1>
-                    <h3>${item.price.toFixed(2)}</h3>
+export default function Main(props) {
+    return <main className = "block col-2">
+        <div class = "wrapper">
+            <h1>Pickup Scheduling</h1>
+        </div>
+        <form>
+            <div className = "row">
+                <div className = "col-2">
+                <label><h2>First Name</h2></label>
+                <input type = 'text' />
                 </div>
-                <div style={{display: 'flex', flexDirection: 'row',justifyContent: 'center', alignItems: 'center', alignSelf: 'center', height: '80%', width: '30%'}}>
-                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', marginRight: '10px'}}>
-                        <IconButton size='large' onClick={increaseQuantity}>
-                            <ArrowCircleUpIcon fontSize='large'/>
-                        </IconButton>
-                        <TextField value={quantity} style={{width: '50px', alignSelf: 'center', textAlign: 'center'}} inputProps={{style: {textAlign: 'center'}}}/>
-                        <IconButton size='large' onClick={decreaseQuantity}>
-                            <ArrowCircleDownIcon fontSize='large'/>
-                        </IconButton>
-                    </div>
-                    <Button variant='contained' onClick={addItem(idx, quantity)} style={{width: '150px', height: '50px'}}>Add To Cart</Button>
+                <div className = "col-2">
+                <label><h2>Last Name</h2></label>
+                <input type = 'text' />
                 </div>
-            </Card>
-    );
+            </div>
+            <div className = "row">
+                <div className = "col-2">
+                <label><h2>Email</h2></label>
+                <input type = 'text' />
+                </div>
+                <div className = "col-2">
+                <label><h2>Phone Number</h2></label>
+                <input type = 'text' />
+                </div>
+            </div>
+            <div>
+                <label><h2>Time</h2></label>
+                <select>
+                    <option value = "8:00 am">8:00 am</option>
+                    <option value = "9:00 am">9:00 am</option>
+                    <option value = "10:00 am">10:00 am</option>
+                    <option value = "11:00 am">11:00 am</option>
+                    <option value = "12:00 pm">12:00 pm</option>
+                    <option value = "1:00 pm">1:00 pm</option>
+                    <option value = "2:00 pm">2:00 pm</option>
+                    <option value = "3:00 pm">3:00 pm</option>
+                    <option value = "4:00 pm">4:00 pm</option>
+                    <option value = "5:00 pm">5:00 pm</option>
+                    <option value = "6:00 pm">6:00 pm</option>
+                    <option value = "7:00 pm">7:00 pm</option>
+                </select>
+            </div>
+            <div>
+                <label><h2>Additional Comments</h2></label>
+                <textarea
+          rows={25}
+          cols={100}/>
+            </div>
+        </form>
+        </main>;
 }
-
-export default Item;

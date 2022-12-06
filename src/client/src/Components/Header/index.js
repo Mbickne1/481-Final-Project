@@ -20,6 +20,9 @@ const Header = (props) => {
             {view == 1 &&
                 <ShopHeader setView={setView}/>
             }
+            {view == 2 &&
+                <ShopHeader setView={setView}/>
+            }
             <div style={{width: '50%', minHeight: '25px', borderRadius: '10px', backgroundColor: '#f5426c', margin: 'auto'}}></div>
         </>
     );
