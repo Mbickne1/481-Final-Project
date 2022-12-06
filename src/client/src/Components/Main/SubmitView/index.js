@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Cart from './Cart';
 import Item from './Item';
 
-const ItemView = (props) => {
+const SubmitView = (props) => {
     const {setView, cart, setCart, data, cartTotal, setCartTotal} = props;
     const [itemList, setItemList] = useState([]);
 
@@ -48,4 +48,4 @@ const ItemView = (props) => {
         
     );
 }
-export default ItemView;
+export default SubmitView;
